@@ -1,0 +1,510 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(255, 192, 203, 0.514);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 7%;
+    background-color:rgba(252, 163, 178, 0.671);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.navbar .logo {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: left;
+}
+
+.navbar .logo img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.navbar .navbar-nav{
+    display: flex;
+}
+
+.navbar .navbar-nav a {
+    display: inline-block;
+    color: rgb(250, 132, 132);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem;
+    padding: 8px 10px;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 20px;
+    background: 1.2rem rgb(249, 245, 246);
+    text-decoration: none;
+}
+
+.navbar .navbar-nav a:hover {
+    color: rgb(209, 91, 91);
+    font-size: 1.3rem;
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    border-bottom: 0.1rem solid pink;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-nav iframe{
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+/* navbar-dropdown */
+.nav-drop a {
+    padding: 0;    
+}
+
+.nav-drop ul{
+    list-style-type: none;
+}
+
+li.nav-drop {
+    display: inline-block;
+}
+
+.nav-drop:hover .isi-drop {
+    display: block;
+}
+
+.isi-drop a:hover {
+    color: rgb(249, 245, 246) !important;
+}
+
+.isi-drop {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.isi-drop a {
+    color:rgb(250, 132, 132) !important;
+    border-radius: 0;
+}
+
+.isi-drop a:hover {
+    color: rgb(249, 245, 246) !important;
+    background: rgb(209, 91, 91) !important;
+}
+
+/* Main */
+section .main-section {
+    margin-top: 100px;
+    padding-top: 100px;
+    z-index: 100;
+    color: black;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    height: 100vh;
+    background-image: url(images/kue.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+section .main-section h1 {
+    margin-top: 120px;
+    padding-top: 120px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+section .main-section p {
+    padding-top: 10px;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+
+}
+
+section .main-section button {
+    padding: 15px;
+    margin: 15px;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(249, 245, 246);
+    font-weight: bold;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}   
+
+section .main-section button:hover {
+    background-color: pink;
+    transition: all .3s ease;
+}
+
+/* About */
+section .about-section {
+    padding: 50px 0px 50px 0px;
+    background-color:rgb(249, 245, 246) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section .aboutus h2 {
+    margin-top: 50px;
+    padding-top: 50px;
+    font-size: 2.0rem;
+}
+
+section .aboutus h2::after {
+    content: "";
+    border-bottom: 5px solid rgb(209, 91, 91);
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+
+#about {
+    text-align: center;
+}
+
+section p.tulisan {
+    font-size: 25px;
+    margin: 50px;
+    padding: 50px;
+    
+}
+
+/* Menu */
+section .menu-section {
+    padding: 50px 0px 50px 0px;
+    background-color:pink;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section .menu-section h3 {
+    margin-top: 50px;
+    padding-top: 50px;
+    font-size: 2.0rem;
+}
+
+section .menu-section h3::after {
+    content: "";
+    border-bottom: 5px solid rgb(209, 91, 91); 
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+
+#daftar {
+    text-align: center;
+}
+
+section .menu-section .daftarmenu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two equal-width columns */
+    gap: 30px; /* Gap between items */
+}
+
+section .menu-section .daftarmenu .daftar-menu {
+    text-align: center;
+    border: 1px solid pink;
+    padding: 20px;
+    margin: 20px;
+}
+
+section .menu-section .daftarmenu img {
+    display: grid;
+    width: 100%;
+    height: 320px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-radius: 15%;
+}
+
+section .menu-section .daftarmenu img:hover{
+    transform: scale(1.1);
+    transition: all 0.55s ease-in-out;
+}
+
+section .menu-section .daftarmenu p {
+    font-size: 25px;
+    margin-bottom: 15px;
+    padding: 15px;
+    align-items: center;
+}
+
+section .menu-section .daftarmenu button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    background-color:rgb(249, 245, 246);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section .menu-section .daftarmenu button:hover {
+    background-color:rgba(252, 163, 178, 0.671);
+    transition: all .3s ease;
+}
+
+/* Registration */
+section .form-section {
+    padding: 50px 0px 50px 0px;
+    background-color:rgb(249, 245, 246) ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section .form-section h4 {
+    margin-top: 50px;
+    padding-top: 50px;
+    font-size: 2.0rem;
+}
+
+section .form-section h4::after {
+    content: "";
+    border-bottom: 5px solid rgb(209, 91, 91); 
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+
+#regisform {
+    text-align: center;
+}
+
+.form-section form{
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 50px;
+}
+
+input[type=text], input[type=type], input[type=lname]  {
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid  rgb(241, 213, 220);
+    box-sizing: border-box;
+  }
+
+.form button {
+    background-color: pink;
+    color: rgb(209, 91, 91);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 6%;
+  }
+  
+/* Contact */
+section .contact-section {
+    padding: 50px 0px 50px 0px;
+    background-color: pink;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section .contact h5 {
+    margin-top: 50px;
+    padding-top: 50px;
+    font-size: 2.0rem;
+}
+
+section .contact h5::after {
+    content:"";
+    border-bottom: 5px solid rgb(209, 91, 91);
+    width: 52px;
+    display: block;
+    margin: 20px auto;
+}
+
+#contact {
+    text-align: center;
+}
+
+section .logo-contact a {
+    padding-top: 10px;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin: 2rem;
+}
+
+/* Footer */
+footer {
+    padding: 50px 0px 50px 0px;
+    background-color: rgb(248, 217, 222);
+    color: black;
+    text-decoration: none;
+}
+
+footer .section-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer .section-footer {
+    gap: 30px;
+}
+
+footer .section-footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer .section-credit {
+    font-size: 15px;
+    text-align: center;
+    padding-top: 15px;
+} 
+
+
+@media screen and (max-width: 1340px) {
+    html{
+        font-size: 75%;
+    }
+
+    #menu{
+        display: inline-block;
+        z-index: 1;
+    }
+
+    .navbar{
+        padding: 1.8rem 4%;
+    }
+
+    .navbar .navbar-nav{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color:rgb(252, 163, 178);
+        width: 30rem;
+        height: 150vh;
+    }
+
+    .navbar .navbar-nav.active{
+        right: 0;
+        transition: 1s;
+    }
+
+    .navbar .navbar-nav a{
+        font-size: large;
+        color: rgb(250, 132, 132);
+        display: block;
+        margin: 1.4rem;
+    }
+
+    .navbar .navbar-nav a:hover{
+        color: rgb(209, 91, 91);
+        font-size: 1.6rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        content: '';
+        display: block;
+        padding-bottom: 0.2rem;
+        border-bottom: 0.1rem solid pink;
+        transform: scaleX(0);
+        transition: 0.2s linear;
+    }
+
+    .dropdown .isi-dropdown{
+        background-color: rgb(209, 91, 91);
+    }
+
+    .navbar .navbar-nav iframe{
+        padding: 10px;
+        margin: 20px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    section .menu-section .daftarmenu img {
+        display: grid;
+        width: 100%;
+        height: 320px;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-radius: 15%;
+    }
+    
+    section .menu-section .daftarmenu img:hover{
+        transform: scale(1.1);
+        transition: all 0.55s ease-in-out;
+    }
+    
+    .footer{
+        font-size: 75%;
+    }
+    
+    .footer-nav a{
+        font-size: 11px;
+    }
+    
+    .credit p, a{
+        font-size: 11px;
+    }
+}
+
+@media  screen and (max-width: 750px){
+    body {
+        /* font-size: 70px; */
+    }
+
+    section .menu-section .daftarmenu{
+        display: flex;
+        flex-direction: column;
+    }
+}
+    
+
